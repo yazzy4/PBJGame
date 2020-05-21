@@ -11,6 +11,7 @@ import UIKit
 class MainPBJViewController: UIViewController {
     
     var testing = "testing"
+    var workingOnUI = "Working on UI"
 
     override func viewDidLoad() {
         super.viewDidLoad()
