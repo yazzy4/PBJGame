@@ -9,6 +9,8 @@
 import UIKit
 
 class MainPBJViewController: UIViewController {
+    
+    var testing = "testing"
 
     override func viewDidLoad() {
         super.viewDidLoad()
