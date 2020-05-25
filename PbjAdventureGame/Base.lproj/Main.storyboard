@@ -14,30 +14,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBJ  GAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-TH-iXY">
+                                <rect key="frame" x="16" y="211" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="irq-Hh-Q0X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-K4-6kC">
+                                <rect key="frame" x="30" y="346" width="315" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.97906789985680009" blue="0.86913791277478325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RFS-gs-yJL" kind="presentation" identifier="startButtonSegue" id="CId-3t-z9p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eVa-TH-iXY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-72.5" id="9Hh-0i-qWw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZL0-K4-6kC" secondAttribute="trailing" constant="30" id="UVm-Ug-Cki"/>
+                            <constraint firstItem="eVa-TH-iXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mq4-y8-mRg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVa-TH-iXY" secondAttribute="trailing" constant="16" id="qlv-4i-SfC"/>
+                            <constraint firstItem="ZL0-K4-6kC" firstAttribute="top" secondItem="eVa-TH-iXY" secondAttribute="bottom" constant="35" id="rEd-ov-R1k"/>
+                            <constraint firstItem="ZL0-K4-6kC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vyG-QD-Jet"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xK2-kM-8Hw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="23"/>
+            <point key="canvasLocation" x="372" y="22.938530734632685"/>
         </scene>
         <!--Bread View Controller-->
         <scene sceneID="aaa-AN-6aC">
             <objects>
                 <viewController id="RFS-gs-yJL" customClass="BreadViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O3C-uj-gpt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Bread Slices" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-ur-hn0">
+                                <rect key="frame" x="30" y="100" width="315" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="fBj-i5-BLW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Poz-je-pwj">
+                                <rect key="frame" x="140" y="321" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="wXU-ur-hn0" secondAttribute="trailing" constant="30" id="VjW-MM-W9V"/>
+                            <constraint firstItem="wXU-ur-hn0" firstAttribute="top" secondItem="lLy-Rw-lQ1" secondAttribute="top" constant="100" id="kYS-ke-0Ju"/>
+                            <constraint firstItem="wXU-ur-hn0" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="30" id="okb-La-f5r"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lLy-Rw-lQ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="9aS-m2-5xd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9Q-D5-vp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="20.239880059970016"/>
+            <point key="canvasLocation" x="1968.8" y="18.440779610194905"/>
         </scene>
         <!--Jelly View Controller-->
         <scene sceneID="U0b-TL-bNF">
@@ -103,4 +153,7 @@
             <point key="canvasLocation" x="1104.8" y="20.239880059970016"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CId-3t-z9p"/>
+    </inferredMetricsTieBreakers>
 </document>
