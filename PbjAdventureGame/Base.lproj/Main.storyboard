@@ -70,16 +70,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Poz-je-pwj">
-                                <rect key="frame" x="140" y="321" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Poz-je-pwj">
+                                <rect key="frame" x="140" y="274" width="94" height="32"/>
                             </stepper>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45Q-tr-qCr">
+                                <rect key="frame" x="140" y="324" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lc-ZK-1S2">
+                                <rect key="frame" x="30" y="390" width="315" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.97906789989999998" blue="0.86913791279999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Gko-SX-Los"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="odo-lq-XbY" kind="presentation" id="Yd5-dd-n08"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="3Lc-ZK-1S2" secondAttribute="trailing" constant="30" id="7Ky-bP-I3J"/>
+                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="Poz-je-pwj" secondAttribute="trailing" constant="141" id="DTS-Wq-JBQ"/>
+                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="45Q-tr-qCr" secondAttribute="trailing" constant="138" id="K2Z-dn-yoY"/>
+                            <constraint firstItem="3Lc-ZK-1S2" firstAttribute="top" secondItem="45Q-tr-qCr" secondAttribute="bottom" constant="32" id="RMh-rm-WNT"/>
                             <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="wXU-ur-hn0" secondAttribute="trailing" constant="30" id="VjW-MM-W9V"/>
+                            <constraint firstItem="Poz-je-pwj" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="140" id="Yd2-4p-14m"/>
+                            <constraint firstItem="45Q-tr-qCr" firstAttribute="leading" secondItem="Poz-je-pwj" secondAttribute="leading" id="f1n-jV-G5k"/>
                             <constraint firstItem="wXU-ur-hn0" firstAttribute="top" secondItem="lLy-Rw-lQ1" secondAttribute="top" constant="100" id="kYS-ke-0Ju"/>
+                            <constraint firstItem="3Lc-ZK-1S2" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="30" id="mep-S5-zN3"/>
+                            <constraint firstItem="45Q-tr-qCr" firstAttribute="top" secondItem="Poz-je-pwj" secondAttribute="bottom" constant="18" id="ngU-4n-f7U"/>
                             <constraint firstItem="wXU-ur-hn0" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="30" id="okb-La-f5r"/>
+                            <constraint firstItem="Poz-je-pwj" firstAttribute="top" secondItem="wXU-ur-hn0" secondAttribute="bottom" constant="44" id="qcr-AR-ggx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLy-Rw-lQ1"/>
                     </view>
@@ -94,9 +121,70 @@
             <objects>
                 <viewController id="odo-lq-XbY" customClass="JellyViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJQ-hp-jfc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Jelly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-mP-GS6">
+                                <rect key="frame" x="20" y="95" width="335" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wj8-rc-Qg4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="SBC-CE-JcP">
+                                <rect key="frame" x="70" y="235" width="100" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-pS-SEB">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="37"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQz-7G-G7w">
+                                        <rect key="frame" x="0.0" y="95" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djL-kj-QvY">
+                                        <rect key="frame" x="0.0" y="183" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QC0-4s-hBc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-zx-YgH">
+                                <rect key="frame" x="208" y="235" width="100" height="206"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSG-dG-WZn">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-rP-WTs">
+                                        <rect key="frame" x="0.0" y="88" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHj-6A-p3F">
+                                        <rect key="frame" x="0.0" y="176" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8Tc-J0-ZB7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xzb-mP-GS6" firstAttribute="leading" secondItem="M5x-Up-p6n" secondAttribute="leading" constant="20" id="8I6-Gu-H27"/>
+                            <constraint firstItem="EWu-zx-YgH" firstAttribute="leading" secondItem="SBC-CE-JcP" secondAttribute="trailing" constant="38" id="8o3-OT-lnp"/>
+                            <constraint firstItem="SBC-CE-JcP" firstAttribute="leading" secondItem="M5x-Up-p6n" secondAttribute="leading" constant="70" id="WC7-iF-bB9"/>
+                            <constraint firstItem="EWu-zx-YgH" firstAttribute="top" secondItem="SBC-CE-JcP" secondAttribute="top" id="Y0c-fr-OKR"/>
+                            <constraint firstItem="SBC-CE-JcP" firstAttribute="top" secondItem="xzb-mP-GS6" secondAttribute="bottom" constant="40" id="eJL-UE-kud"/>
+                            <constraint firstItem="xzb-mP-GS6" firstAttribute="top" secondItem="M5x-Up-p6n" secondAttribute="top" constant="95" id="orG-Vw-01Y"/>
+                            <constraint firstItem="M5x-Up-p6n" firstAttribute="trailing" secondItem="xzb-mP-GS6" secondAttribute="trailing" constant="20" id="wbb-A9-eEw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M5x-Up-p6n"/>
                     </view>
                 </viewController>
