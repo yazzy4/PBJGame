@@ -85,6 +85,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="sliceButtonPressedf:" destination="RFS-gs-yJL" eventType="touchUpInside" id="mDa-dj-Kv1"/>
                                     <segue destination="odo-lq-XbY" kind="presentation" identifier="slicesSegue" id="Yd5-dd-n08"/>
                                 </connections>
                             </button>
@@ -157,6 +158,7 @@
                                             <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="grapeJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="Rmn-Dv-5a6"/>
                                             <segue destination="hrk-gP-PBl" kind="presentation" identifier="grapeSegue" id="lWP-x0-job"/>
                                         </connections>
                                     </button>
@@ -167,6 +169,7 @@
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="blackberryJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="XK0-pO-xUi"/>
                                             <segue destination="hrk-gP-PBl" kind="presentation" identifier="blackberrySegue" id="4m2-DL-Oxy"/>
                                         </connections>
                                     </button>
@@ -177,6 +180,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="peachJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="V7X-oB-4zL"/>
                                             <segue destination="hrk-gP-PBl" kind="presentation" identifier="peachSegue" id="33e-ie-kEG"/>
                                         </connections>
                                     </button>
@@ -195,6 +199,7 @@
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="strawberryJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="fnn-ap-bGg"/>
                                             <segue destination="hrk-gP-PBl" kind="presentation" identifier="strawberrySegue" id="3Wu-FS-zIf"/>
                                         </connections>
                                     </button>
@@ -205,6 +210,7 @@
                                             <color key="titleColor" red="0.91980725526809692" green="0.0" blue="0.37259167918049158" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
+                                            <action selector="raspberryJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="h7H-Pc-vM8"/>
                                             <segue destination="hrk-gP-PBl" kind="presentation" identifier="raspberrySegue" id="DLu-PJ-deD"/>
                                         </connections>
                                     </button>
@@ -215,6 +221,7 @@
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="mixedJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="mKH-LV-Lk2"/>
                                             <segue destination="hrk-gP-PBl" kind="presentation" identifier="mixedFruitSegue" id="nZO-Ey-bDL"/>
                                         </connections>
                                     </button>
@@ -263,6 +270,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Smooth"/>
                                 <connections>
+                                    <action selector="smoothJellySelected:" destination="hrk-gP-PBl" eventType="touchUpInside" id="RCY-ya-HHc"/>
                                     <segue destination="boB-zg-UAu" kind="presentation" identifier="smoothSegue" id="zVJ-Wt-mTc"/>
                                 </connections>
                             </button>
@@ -271,6 +279,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Crunchy"/>
                                 <connections>
+                                    <action selector="crunchyPBSelected:" destination="hrk-gP-PBl" eventType="touchUpInside" id="qHD-ce-XYR"/>
                                     <segue destination="boB-zg-UAu" kind="presentation" identifier="crunchySegue" id="5Vr-l9-BlO"/>
                                 </connections>
                             </button>
@@ -336,6 +345,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="looksGoodButtonPressed:" destination="boB-zg-UAu" eventType="touchUpInside" id="jpd-cz-GpJ"/>
                                     <segue destination="yQr-YU-Ada" kind="show" identifier="startSegue" id="Fun-24-jol"/>
                                 </connections>
                             </button>
@@ -360,6 +370,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kna-pL-ksi"/>
                     </view>
+                    <connections>
+                        <outlet property="jellyTypeLabel" destination="NXa-sv-PAk" id="of3-av-m0Z"/>
+                        <outlet property="pbStyleLabel" destination="bYy-5Q-Pat" id="HWL-qu-020"/>
+                        <outlet property="slicesLabel" destination="axJ-2J-EgJ" id="Ii1-UZ-z20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AF-TM-FcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

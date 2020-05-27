@@ -9,11 +9,20 @@
 import UIKit
 
 class PeanutButterViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-
+    @IBAction func crunchyPBSelected(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func smoothJellySelected(_ sender: UIButton) {
+    }
+    
+    
 }

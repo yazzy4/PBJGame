@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol PBJDataSendingDelegateProtocol {
+    func sendPBJInfoToViewController(pbjPart: String)
+}
+
 class BreadViewController: UIViewController {
     
-    @IBOutlet weak var valueLabel: UILabel!
+    var delegate: PBJDataSendingDelegateProtocol? = nil
     
+    @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     
     
@@ -27,6 +32,10 @@ class BreadViewController: UIViewController {
         valueLabel.text = Int(sender.value).description
     }
     
- 
+    
+    @IBAction func sliceButtonPressed(_ sender: UIButton) {
+        
+    }
+    
 
 }

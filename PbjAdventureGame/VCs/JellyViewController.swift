@@ -15,6 +15,28 @@ class JellyViewController: UIViewController {
 
         
     }
-
-
+    
+    
+    @IBAction func grapeJellySelected(_ sender: UIButton) {
+    }
+    
+    @IBAction func strawberryJellySelected(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func blackberryJellySelected(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func raspberryJellySelected(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func peachJellySelected(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func mixedJellySelected(_ sender: UIButton) {
+    }
+    
 }
