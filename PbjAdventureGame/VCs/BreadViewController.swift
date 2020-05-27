@@ -9,13 +9,24 @@
 import UIKit
 
 class BreadViewController: UIViewController {
-
+    
+    @IBOutlet weak var valueLabel: UILabel!
+    
+    @IBOutlet weak var stepper: UIStepper!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        stepper.wraps = true
+        stepper.autorepeat = true
+        stepper.maximumValue = 10
     }
     
-
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        valueLabel.text = Int(sender.value).description
+    }
+    
  
 
 }

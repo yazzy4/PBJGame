@@ -88,37 +88,43 @@
                                     <segue destination="odo-lq-XbY" kind="presentation" identifier="slicesSegue" id="Yd5-dd-n08"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45Q-tr-qCr">
-                                <rect key="frame" x="140.5" y="330" width="94" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="PgE-EM-oSE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Poz-je-pwj">
                                 <rect key="frame" x="140.5" y="279" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="RFS-gs-yJL" eventType="valueChanged" id="Uga-f2-68f"/>
+                                </connections>
                             </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy0-cI-ji6">
+                                <rect key="frame" x="166" y="319" width="43" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="qYq-ln-j3D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Poz-je-pwj" firstAttribute="top" secondItem="wXU-ur-hn0" secondAttribute="bottom" constant="66.5" id="0Yv-Hd-10e"/>
+                            <constraint firstItem="yy0-cI-ji6" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="166" id="9fJ-V1-A6z"/>
                             <constraint firstItem="wXU-ur-hn0" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="30" id="Cg9-5g-Vh5"/>
-                            <constraint firstItem="45Q-tr-qCr" firstAttribute="centerX" secondItem="O3C-uj-gpt" secondAttribute="centerX" id="FvB-8m-7AX"/>
                             <constraint firstItem="wXU-ur-hn0" firstAttribute="top" secondItem="lLy-Rw-lQ1" secondAttribute="top" constant="100" id="Gmf-28-tFr"/>
-                            <constraint firstItem="45Q-tr-qCr" firstAttribute="trailing" secondItem="Poz-je-pwj" secondAttribute="trailing" id="JHL-KW-pLU"/>
                             <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="3Lc-ZK-1S2" secondAttribute="trailing" constant="16" id="SkU-LC-MIJ"/>
-                            <constraint firstItem="45Q-tr-qCr" firstAttribute="leading" secondItem="Poz-je-pwj" secondAttribute="leading" id="Slc-sa-dj8"/>
+                            <constraint firstItem="yy0-cI-ji6" firstAttribute="top" secondItem="Poz-je-pwj" secondAttribute="bottom" constant="8" id="VkL-Ou-EH3"/>
                             <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="wXU-ur-hn0" secondAttribute="trailing" constant="30" id="WVy-b8-IfM"/>
                             <constraint firstItem="lLy-Rw-lQ1" firstAttribute="bottom" secondItem="3Lc-ZK-1S2" secondAttribute="bottom" constant="211" id="bJ8-z1-lbg"/>
                             <constraint firstItem="3Lc-ZK-1S2" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="16" id="dhg-nc-MWS"/>
                             <constraint firstItem="Poz-je-pwj" firstAttribute="centerX" secondItem="O3C-uj-gpt" secondAttribute="centerX" id="mJv-QW-KD3"/>
-                            <constraint firstItem="3Lc-ZK-1S2" firstAttribute="top" secondItem="45Q-tr-qCr" secondAttribute="bottom" constant="22" id="nUC-ht-nI0"/>
-                            <constraint firstItem="45Q-tr-qCr" firstAttribute="top" secondItem="Poz-je-pwj" secondAttribute="bottom" constant="19" id="tPE-nY-Uvk"/>
+                            <constraint firstItem="yy0-cI-ji6" firstAttribute="centerX" secondItem="Poz-je-pwj" secondAttribute="centerX" id="oF1-XX-VBL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLy-Rw-lQ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="9aS-m2-5xd"/>
+                    <connections>
+                        <outlet property="stepper" destination="Poz-je-pwj" id="FZ5-fw-qJe"/>
+                        <outlet property="valueLabel" destination="yy0-cI-ji6" id="gXK-FW-jtO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9Q-D5-vp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
