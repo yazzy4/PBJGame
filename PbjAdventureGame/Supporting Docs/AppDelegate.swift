@@ -14,7 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+          //changes nav bar appearence
+             let size: CGFloat = 25
+             var fontDescriptor = UIFontDescriptor(name: "Avenir Next", size: size)
+             fontDescriptor = fontDescriptor.addingAttributes([UIFontDescriptor.AttributeName.traits : [UIFontDescriptor.TraitKey.weight: UIFont.Weight.semibold] ])
+             let attrs: [NSAttributedString.Key : Any] = [
+                 NSAttributedString.Key.foregroundColor : UIColor.white,
+                 NSAttributedString.Key.font : UIFont(descriptor: fontDescriptor, size: size)
+             ]
+             
+             let navApperance = UINavigationBar.appearance()
+             navApperance.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+             navApperance.barTintColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+             navApperance.titleTextAttributes = attrs
         return true
     }
 
