@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionOneViewController: UIViewController {
+class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

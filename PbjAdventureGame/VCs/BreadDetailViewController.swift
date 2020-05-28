@@ -8,25 +8,27 @@
 
 import UIKit
 
-protocol PBJDataSendingDelegateProtocol {
-    func sendPBJInfoToViewController(pbjPart: String)
-}
 
-class BreadViewController: UIViewController {
+
+class BreadDetailViewController: UIViewController {
     
-    var delegate: PBJDataSendingDelegateProtocol? = nil
-    
+
+   
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         stepper.wraps = true
         stepper.autorepeat = true
         stepper.maximumValue = 10
     }
+    
+
+   
+
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         valueLabel.text = Int(sender.value).description
@@ -34,8 +36,7 @@ class BreadViewController: UIViewController {
     
     
     @IBAction func sliceButtonPressed(_ sender: UIButton) {
-        
+      
     }
-    
-
 }
+

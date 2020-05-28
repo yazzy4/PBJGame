@@ -8,7 +8,13 @@
 
 import UIKit
 
-class JellyViewController: UIViewController {
+class JellyDetailViewController: UIViewController {
+    
+   
+    func sendPBJInfoToViewController(pbjPart: String) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +40,7 @@ class JellyViewController: UIViewController {
     
     @IBAction func peachJellySelected(_ sender: UIButton) {
     }
-    
+
     
     @IBAction func mixedJellySelected(_ sender: UIButton) {
     }

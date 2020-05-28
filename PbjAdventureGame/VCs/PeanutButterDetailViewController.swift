@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeanutButterViewController: UIViewController {
+class PeanutButterDetailViewController: UIViewController {
     
     
 

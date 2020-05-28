@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainPBJ View Controller-->
+        <!--Start Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainPBJViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartGameViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,12 +31,9 @@
                                     <constraint firstAttribute="height" constant="50" id="RVw-nf-Kai"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Start Game">
+                                <state key="normal" title="Start Order">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="RFS-gs-yJL" kind="presentation" identifier="startButtonSegue" id="CId-3t-z9p"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,347 +51,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="22.938530734632685"/>
+            <point key="canvasLocation" x="548" y="23"/>
         </scene>
-        <!--Bread View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="aaa-AN-6aC">
             <objects>
-                <viewController id="RFS-gs-yJL" customClass="BreadViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RFS-gs-yJL" customClass="MainMenuViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O3C-uj-gpt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Bread Slices" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-ur-hn0">
-                                <rect key="frame" x="30" y="100" width="315" height="112.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Oo1-pm-3nz">
-                                <rect key="frame" x="120" y="247.5" width="32" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lc-ZK-1S2">
-                                <rect key="frame" x="16" y="386" width="343" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.97906789989999998" blue="0.86913791279999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="euW-5r-MUm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Enter">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="sliceButtonPressedf:" destination="RFS-gs-yJL" eventType="touchUpInside" id="mDa-dj-Kv1"/>
-                                    <segue destination="odo-lq-XbY" kind="presentation" identifier="slicesSegue" id="Yd5-dd-n08"/>
-                                </connections>
-                            </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Poz-je-pwj">
-                                <rect key="frame" x="140.5" y="279" width="94" height="32"/>
-                                <connections>
-                                    <action selector="stepperValueChanged:" destination="RFS-gs-yJL" eventType="valueChanged" id="Uga-f2-68f"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy0-cI-ji6">
-                                <rect key="frame" x="166" y="319" width="43" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="qYq-ln-j3D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Poz-je-pwj" firstAttribute="top" secondItem="wXU-ur-hn0" secondAttribute="bottom" constant="66.5" id="0Yv-Hd-10e"/>
-                            <constraint firstItem="yy0-cI-ji6" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="166" id="9fJ-V1-A6z"/>
-                            <constraint firstItem="wXU-ur-hn0" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="30" id="Cg9-5g-Vh5"/>
-                            <constraint firstItem="wXU-ur-hn0" firstAttribute="top" secondItem="lLy-Rw-lQ1" secondAttribute="top" constant="100" id="Gmf-28-tFr"/>
-                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="3Lc-ZK-1S2" secondAttribute="trailing" constant="16" id="SkU-LC-MIJ"/>
-                            <constraint firstItem="yy0-cI-ji6" firstAttribute="top" secondItem="Poz-je-pwj" secondAttribute="bottom" constant="8" id="VkL-Ou-EH3"/>
-                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="trailing" secondItem="wXU-ur-hn0" secondAttribute="trailing" constant="30" id="WVy-b8-IfM"/>
-                            <constraint firstItem="lLy-Rw-lQ1" firstAttribute="bottom" secondItem="3Lc-ZK-1S2" secondAttribute="bottom" constant="211" id="bJ8-z1-lbg"/>
-                            <constraint firstItem="3Lc-ZK-1S2" firstAttribute="leading" secondItem="lLy-Rw-lQ1" secondAttribute="leading" constant="16" id="dhg-nc-MWS"/>
-                            <constraint firstItem="Poz-je-pwj" firstAttribute="centerX" secondItem="O3C-uj-gpt" secondAttribute="centerX" id="mJv-QW-KD3"/>
-                            <constraint firstItem="yy0-cI-ji6" firstAttribute="centerX" secondItem="Poz-je-pwj" secondAttribute="centerX" id="oF1-XX-VBL"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lLy-Rw-lQ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="9aS-m2-5xd"/>
-                    <connections>
-                        <outlet property="stepper" destination="Poz-je-pwj" id="FZ5-fw-qJe"/>
-                        <outlet property="valueLabel" destination="yy0-cI-ji6" id="gXK-FW-jtO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9Q-D5-vp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968.8" y="18.440779610194905"/>
+            <point key="canvasLocation" x="2401" y="23"/>
         </scene>
-        <!--Jelly View Controller-->
+        <!--Jelly Detail View Controller-->
         <scene sceneID="U0b-TL-bNF">
             <objects>
-                <viewController id="odo-lq-XbY" customClass="JellyViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="odo-lq-XbY" customClass="JellyDetailViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJQ-hp-jfc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Jelly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-mP-GS6">
-                                <rect key="frame" x="20" y="95" width="335" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Wj8-rc-Qg4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="SBC-CE-JcP">
-                                <rect key="frame" x="70" y="235" width="100" height="221"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-pS-SEB">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="37"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <state key="normal" title="Grape">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="grapeJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="Rmn-Dv-5a6"/>
-                                            <segue destination="hrk-gP-PBl" kind="presentation" identifier="grapeSegue" id="lWP-x0-job"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQz-7G-G7w">
-                                        <rect key="frame" x="0.0" y="95" width="100" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Blackberrry">
-                                            <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="blackberryJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="XK0-pO-xUi"/>
-                                            <segue destination="hrk-gP-PBl" kind="presentation" identifier="blackberrySegue" id="4m2-DL-Oxy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djL-kj-QvY">
-                                        <rect key="frame" x="0.0" y="187" width="100" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Peach">
-                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="peachJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="V7X-oB-4zL"/>
-                                            <segue destination="hrk-gP-PBl" kind="presentation" identifier="peachSegue" id="33e-ie-kEG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="QC0-4s-hBc"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-zx-YgH">
-                                <rect key="frame" x="208" y="235" width="100" height="218"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSG-dG-WZn">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Strawberry">
-                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="strawberryJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="fnn-ap-bGg"/>
-                                            <segue destination="hrk-gP-PBl" kind="presentation" identifier="strawberrySegue" id="3Wu-FS-zIf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-rP-WTs">
-                                        <rect key="frame" x="0.0" y="92" width="100" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Raspberry">
-                                            <color key="titleColor" red="0.91980725526809692" green="0.0" blue="0.37259167918049158" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="raspberryJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="h7H-Pc-vM8"/>
-                                            <segue destination="hrk-gP-PBl" kind="presentation" identifier="raspberrySegue" id="DLu-PJ-deD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHj-6A-p3F">
-                                        <rect key="frame" x="0.0" y="184" width="100" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Mixed Fruit">
-                                            <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="mixedJellySelected:" destination="odo-lq-XbY" eventType="touchUpInside" id="mKH-LV-Lk2"/>
-                                            <segue destination="hrk-gP-PBl" kind="presentation" identifier="mixedFruitSegue" id="nZO-Ey-bDL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="8Tc-J0-ZB7"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="xzb-mP-GS6" firstAttribute="leading" secondItem="M5x-Up-p6n" secondAttribute="leading" constant="20" id="8I6-Gu-H27"/>
-                            <constraint firstItem="EWu-zx-YgH" firstAttribute="leading" secondItem="SBC-CE-JcP" secondAttribute="trailing" constant="38" id="8o3-OT-lnp"/>
-                            <constraint firstItem="SBC-CE-JcP" firstAttribute="leading" secondItem="M5x-Up-p6n" secondAttribute="leading" constant="70" id="WC7-iF-bB9"/>
-                            <constraint firstItem="EWu-zx-YgH" firstAttribute="top" secondItem="SBC-CE-JcP" secondAttribute="top" id="Y0c-fr-OKR"/>
-                            <constraint firstItem="SBC-CE-JcP" firstAttribute="top" secondItem="xzb-mP-GS6" secondAttribute="bottom" constant="40" id="eJL-UE-kud"/>
-                            <constraint firstItem="xzb-mP-GS6" firstAttribute="top" secondItem="M5x-Up-p6n" secondAttribute="top" constant="95" id="orG-Vw-01Y"/>
-                            <constraint firstItem="M5x-Up-p6n" firstAttribute="trailing" secondItem="xzb-mP-GS6" secondAttribute="trailing" constant="20" id="wbb-A9-eEw"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M5x-Up-p6n"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJP-MR-Omw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799.1999999999998" y="22.938530734632685"/>
+            <point key="canvasLocation" x="3262" y="-655"/>
         </scene>
-        <!--Peanut Butter View Controller-->
+        <!--Bread Detail View Controller-->
+        <scene sceneID="WPb-8w-HCp">
+            <objects>
+                <viewController id="Ps4-vG-hYc" customClass="BreadDetailViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2wQ-qJ-Iaa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ibB-0w-6Fp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBK-fK-4rm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3262" y="23"/>
+        </scene>
+        <!--Peanut Butter Detail View Controller-->
         <scene sceneID="i3H-4F-7Sf">
             <objects>
-                <viewController id="hrk-gP-PBl" customClass="PeanutButterViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hrk-gP-PBl" customClass="PeanutButterDetailViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kjG-8y-dUE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a PB Style" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz1-m6-AIa">
-                                <rect key="frame" x="24" y="91" width="335" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="oIq-Pl-L4M"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INm-1K-E9F">
-                                <rect key="frame" x="215" y="262" width="70" height="37"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Smooth"/>
-                                <connections>
-                                    <action selector="smoothJellySelected:" destination="hrk-gP-PBl" eventType="touchUpInside" id="RCY-ya-HHc"/>
-                                    <segue destination="boB-zg-UAu" kind="presentation" identifier="smoothSegue" id="zVJ-Wt-mTc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evm-i8-3Pf">
-                                <rect key="frame" x="90" y="262" width="67" height="37"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Crunchy"/>
-                                <connections>
-                                    <action selector="crunchyPBSelected:" destination="hrk-gP-PBl" eventType="touchUpInside" id="qHD-ce-XYR"/>
-                                    <segue destination="boB-zg-UAu" kind="presentation" identifier="crunchySegue" id="5Vr-l9-BlO"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="bz1-m6-AIa" firstAttribute="leading" secondItem="DRb-Ru-rA9" secondAttribute="leading" constant="24" id="57u-Va-gZ2"/>
-                            <constraint firstItem="bz1-m6-AIa" firstAttribute="trailing" secondItem="DRb-Ru-rA9" secondAttribute="trailing" constant="-16" id="A7P-Nq-l5Z"/>
-                            <constraint firstItem="Evm-i8-3Pf" firstAttribute="top" secondItem="bz1-m6-AIa" secondAttribute="bottom" constant="71" id="HMo-HS-vPU"/>
-                            <constraint firstItem="Evm-i8-3Pf" firstAttribute="leading" secondItem="DRb-Ru-rA9" secondAttribute="leading" constant="90" id="XkI-gI-6eJ"/>
-                            <constraint firstItem="DRb-Ru-rA9" firstAttribute="trailing" secondItem="INm-1K-E9F" secondAttribute="trailing" constant="90" id="fvM-z4-o6J"/>
-                            <constraint firstItem="bz1-m6-AIa" firstAttribute="top" secondItem="DRb-Ru-rA9" secondAttribute="top" constant="91" id="hIt-ho-LBI"/>
-                            <constraint firstItem="INm-1K-E9F" firstAttribute="leading" secondItem="Evm-i8-3Pf" secondAttribute="trailing" constant="58" id="kca-k8-C5g"/>
-                            <constraint firstItem="Evm-i8-3Pf" firstAttribute="baseline" secondItem="INm-1K-E9F" secondAttribute="baseline" id="lbV-MP-GCG"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DRb-Ru-rA9"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vkf-cz-wdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3607.1999999999998" y="19.340329835082461"/>
+            <point key="canvasLocation" x="3262" y="716"/>
         </scene>
         <!--Start Building View Controller-->
         <scene sceneID="bZ5-bM-hHq">
             <objects>
                 <viewController id="boB-zg-UAu" customClass="StartBuildingViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5p9-bN-7xv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are about to make a PBJ with...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stc-Vl-5dW">
-                                <rect key="frame" x="16" y="100" width="343" height="68.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#slices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axJ-2J-EgJ">
-                                <rect key="frame" x="16" y="228.5" width="343" height="25"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#jellyType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXa-sv-PAk">
-                                <rect key="frame" x="16" y="279" width="343" height="25"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#pbStyle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-5Q-Pat">
-                                <rect key="frame" x="16" y="337" width="343" height="25"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8Y-QD-Vtq">
-                                <rect key="frame" x="16" y="427" width="343" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.97906789989999998" blue="0.86913791279999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cy9-Bu-Ujr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Looks good! 👍">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="looksGoodButtonPressed:" destination="boB-zg-UAu" eventType="touchUpInside" id="jpd-cz-GpJ"/>
-                                    <segue destination="yQr-YU-Ada" kind="show" identifier="startSegue" id="Fun-24-jol"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="f8Y-QD-Vtq" firstAttribute="leading" secondItem="Kna-pL-ksi" secondAttribute="leading" constant="16" id="1V2-4P-i3V"/>
-                            <constraint firstItem="stc-Vl-5dW" firstAttribute="top" secondItem="Kna-pL-ksi" secondAttribute="top" constant="100" id="7aG-Gm-91O"/>
-                            <constraint firstItem="NXa-sv-PAk" firstAttribute="top" secondItem="axJ-2J-EgJ" secondAttribute="bottom" constant="25.5" id="Fqc-dW-NGX"/>
-                            <constraint firstItem="bYy-5Q-Pat" firstAttribute="top" secondItem="NXa-sv-PAk" secondAttribute="bottom" constant="33" id="GzJ-kC-iRP"/>
-                            <constraint firstItem="NXa-sv-PAk" firstAttribute="trailing" secondItem="axJ-2J-EgJ" secondAttribute="trailing" id="J3e-Py-JmR"/>
-                            <constraint firstItem="Kna-pL-ksi" firstAttribute="trailing" secondItem="f8Y-QD-Vtq" secondAttribute="trailing" constant="16" id="KjU-Re-0ff"/>
-                            <constraint firstItem="NXa-sv-PAk" firstAttribute="trailing" secondItem="bYy-5Q-Pat" secondAttribute="trailing" id="Ndf-U5-LdA"/>
-                            <constraint firstItem="axJ-2J-EgJ" firstAttribute="leading" secondItem="Kna-pL-ksi" secondAttribute="leading" constant="16" id="bDs-vv-nb2"/>
-                            <constraint firstItem="Kna-pL-ksi" firstAttribute="trailing" secondItem="stc-Vl-5dW" secondAttribute="trailing" constant="16" id="cnA-az-CpX"/>
-                            <constraint firstItem="axJ-2J-EgJ" firstAttribute="top" secondItem="stc-Vl-5dW" secondAttribute="bottom" constant="60" id="eRv-7K-jNq"/>
-                            <constraint firstItem="NXa-sv-PAk" firstAttribute="leading" secondItem="bYy-5Q-Pat" secondAttribute="leading" id="epQ-JC-NMK"/>
-                            <constraint firstItem="NXa-sv-PAk" firstAttribute="leading" secondItem="axJ-2J-EgJ" secondAttribute="leading" id="fc6-mT-7GH"/>
-                            <constraint firstItem="Kna-pL-ksi" firstAttribute="trailing" secondItem="axJ-2J-EgJ" secondAttribute="trailing" constant="16" id="sSG-jd-FMZ"/>
-                            <constraint firstItem="f8Y-QD-Vtq" firstAttribute="top" secondItem="bYy-5Q-Pat" secondAttribute="bottom" constant="65" id="vkz-Fs-PXV"/>
-                            <constraint firstItem="stc-Vl-5dW" firstAttribute="leading" secondItem="Kna-pL-ksi" secondAttribute="leading" constant="16" id="yDl-io-k5r"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kna-pL-ksi"/>
                     </view>
-                    <connections>
-                        <outlet property="jellyTypeLabel" destination="NXa-sv-PAk" id="of3-av-m0Z"/>
-                        <outlet property="pbStyleLabel" destination="bYy-5Q-Pat" id="HWL-qu-020"/>
-                        <outlet property="slicesLabel" destination="axJ-2J-EgJ" id="Ii1-UZ-z20"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AF-TM-FcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4416.8000000000002" y="27.436281859070466"/>
-        </scene>
-        <!--Option One View Controller-->
-        <scene sceneID="drv-Nt-RBO">
-            <objects>
-                <viewController id="yQr-YU-Ada" customClass="OptionOneViewController" customModule="PbjAdventureGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fic-Rx-hM4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="YKw-nS-PRJ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="oRn-MH-wdK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oh3-Gw-g1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5219" y="26"/>
+            <point key="canvasLocation" x="4167" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GQB-6n-euG">
@@ -412,12 +145,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFK-kZ-XAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="20.239880059970016"/>
+            <point key="canvasLocation" x="1418" y="23"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zVJ-Wt-mTc"/>
-        <segue reference="33e-ie-kEG"/>
-        <segue reference="CId-3t-z9p"/>
-    </inferredMetricsTieBreakers>
 </document>

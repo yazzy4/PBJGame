@@ -8,10 +8,9 @@
 
 import UIKit
 
-class MainPBJViewController: UIViewController {
+class StartGameViewController: UIViewController {
     
-    var testing = "testing"
-    var workingOnUI = "Working on UI"
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()

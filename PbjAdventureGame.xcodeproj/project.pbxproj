@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		919DF113247C44CF00AED1D8 /* OptionOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DF112247C44CF00AED1D8 /* OptionOneViewController.swift */; };
+		919DF113247C44CF00AED1D8 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DF112247C44CF00AED1D8 /* MainMenuViewController.swift */; };
 		91EA365F2469EEFB009FFD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA365E2469EEFB009FFD61 /* AppDelegate.swift */; };
 		91EA36612469EEFB009FFD61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA36602469EEFB009FFD61 /* SceneDelegate.swift */; };
 		91EA36662469EEFB009FFD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EA36642469EEFB009FFD61 /* Main.storyboard */; };
 		91EA36682469EEFE009FFD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91EA36672469EEFE009FFD61 /* Assets.xcassets */; };
 		91EA366B2469EEFE009FFD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EA36692469EEFE009FFD61 /* LaunchScreen.storyboard */; };
-		91EA367424772F55009FFD61 /* MainPBJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367324772F55009FFD61 /* MainPBJViewController.swift */; };
-		91EA367624772FD6009FFD61 /* BreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367524772FD6009FFD61 /* BreadViewController.swift */; };
-		91EA367824773028009FFD61 /* JellyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367724773028009FFD61 /* JellyViewController.swift */; };
-		91EA367A24773072009FFD61 /* PeanutButterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367924773072009FFD61 /* PeanutButterViewController.swift */; };
+		91EA367424772F55009FFD61 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367324772F55009FFD61 /* StartGameViewController.swift */; };
+		91EA367624772FD6009FFD61 /* BreadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367524772FD6009FFD61 /* BreadDetailViewController.swift */; };
+		91EA367824773028009FFD61 /* JellyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367724773028009FFD61 /* JellyDetailViewController.swift */; };
+		91EA367A24773072009FFD61 /* PeanutButterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367924773072009FFD61 /* PeanutButterDetailViewController.swift */; };
 		91EA367D2477310D009FFD61 /* StartBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA367C2477310D009FFD61 /* StartBuildingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		919DF112247C44CF00AED1D8 /* OptionOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionOneViewController.swift; sourceTree = "<group>"; };
+		919DF112247C44CF00AED1D8 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		91EA365B2469EEFB009FFD61 /* PbjAdventureGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PbjAdventureGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EA365E2469EEFB009FFD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91EA36602469EEFB009FFD61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,10 +29,10 @@
 		91EA36672469EEFE009FFD61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91EA366A2469EEFE009FFD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91EA366C2469EEFE009FFD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91EA367324772F55009FFD61 /* MainPBJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPBJViewController.swift; sourceTree = "<group>"; };
-		91EA367524772FD6009FFD61 /* BreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadViewController.swift; sourceTree = "<group>"; };
-		91EA367724773028009FFD61 /* JellyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellyViewController.swift; sourceTree = "<group>"; };
-		91EA367924773072009FFD61 /* PeanutButterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutButterViewController.swift; sourceTree = "<group>"; };
+		91EA367324772F55009FFD61 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		91EA367524772FD6009FFD61 /* BreadDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadDetailViewController.swift; sourceTree = "<group>"; };
+		91EA367724773028009FFD61 /* JellyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellyDetailViewController.swift; sourceTree = "<group>"; };
+		91EA367924773072009FFD61 /* PeanutButterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutButterDetailViewController.swift; sourceTree = "<group>"; };
 		91EA367C2477310D009FFD61 /* StartBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBuildingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,12 +88,12 @@
 		91EA367B24773085009FFD61 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				91EA367324772F55009FFD61 /* MainPBJViewController.swift */,
-				91EA367524772FD6009FFD61 /* BreadViewController.swift */,
-				91EA367724773028009FFD61 /* JellyViewController.swift */,
-				91EA367924773072009FFD61 /* PeanutButterViewController.swift */,
+				91EA367324772F55009FFD61 /* StartGameViewController.swift */,
+				919DF112247C44CF00AED1D8 /* MainMenuViewController.swift */,
+				91EA367524772FD6009FFD61 /* BreadDetailViewController.swift */,
+				91EA367724773028009FFD61 /* JellyDetailViewController.swift */,
+				91EA367924773072009FFD61 /* PeanutButterDetailViewController.swift */,
 				91EA367C2477310D009FFD61 /* StartBuildingViewController.swift */,
-				919DF112247C44CF00AED1D8 /* OptionOneViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -170,11 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91EA367D2477310D009FFD61 /* StartBuildingViewController.swift in Sources */,
-				91EA367A24773072009FFD61 /* PeanutButterViewController.swift in Sources */,
-				919DF113247C44CF00AED1D8 /* OptionOneViewController.swift in Sources */,
-				91EA367424772F55009FFD61 /* MainPBJViewController.swift in Sources */,
-				91EA367824773028009FFD61 /* JellyViewController.swift in Sources */,
-				91EA367624772FD6009FFD61 /* BreadViewController.swift in Sources */,
+				91EA367A24773072009FFD61 /* PeanutButterDetailViewController.swift in Sources */,
+				919DF113247C44CF00AED1D8 /* MainMenuViewController.swift in Sources */,
+				91EA367424772F55009FFD61 /* StartGameViewController.swift in Sources */,
+				91EA367824773028009FFD61 /* JellyDetailViewController.swift in Sources */,
+				91EA367624772FD6009FFD61 /* BreadDetailViewController.swift in Sources */,
 				91EA365F2469EEFB009FFD61 /* AppDelegate.swift in Sources */,
 				91EA36612469EEFB009FFD61 /* SceneDelegate.swift in Sources */,
 			);

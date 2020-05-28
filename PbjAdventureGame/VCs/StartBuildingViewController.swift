@@ -8,20 +8,21 @@
 
 import UIKit
 
+ 
+
 class StartBuildingViewController: UIViewController {
     
-    @IBOutlet weak var slicesLabel: UILabel!
-    @IBOutlet weak var jellyTypeLabel: UILabel!
-    @IBOutlet weak var pbStyleLabel: UILabel!
+  
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    
-    @IBAction func looksGoodButtonPressed(_ sender: UIButton) {
-    }
+
     
 
 }
