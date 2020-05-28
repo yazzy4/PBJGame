@@ -23,7 +23,13 @@ class MenuViewiewController: UIViewController {
         menuTableView.dataSource = self
         menuTableView.delegate = self
         
+        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(didPressDoneButton(_:)))
     }
+    
+//    @objc func didPressDoneButton(_ sender: UIBarButtonItem){
+//        performSegue(withIdentifier: "doneSegue", sender: self)
+//    }
 
 
 }

@@ -35,7 +35,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RFS-gs-yJL" kind="presentation" id="9ej-s4-3g7"/>
+                                    <segue destination="4Uy-Np-Qew" kind="presentation" id="9ej-s4-3g7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="23"/>
+            <point key="canvasLocation" x="1546" y="23"/>
         </scene>
         <!--Menu Viewiew Controller-->
         <scene sceneID="aaa-AN-6aC">
@@ -103,7 +103,7 @@
                     <navigationItem key="navigationItem" id="9aS-m2-5xd">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="YYI-d7-Fcg">
                             <connections>
-                                <segue destination="boB-zg-UAu" kind="popoverPresentation" popoverAnchorBarButtonItem="YYI-d7-Fcg" id="ZkG-gq-HuW">
+                                <segue destination="boB-zg-UAu" kind="popoverPresentation" identifier="doneSegue" popoverAnchorBarButtonItem="YYI-d7-Fcg" id="ZkG-gq-HuW">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9Q-D5-vp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2400.8000000000002" y="22.938530734632685"/>
+            <point key="canvasLocation" x="3262" y="23"/>
         </scene>
         <!--Jelly Detail View Controller-->
         <scene sceneID="U0b-TL-bNF">
@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBK-fK-4rm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3262" y="23"/>
+            <point key="canvasLocation" x="4148" y="23"/>
         </scene>
         <!--Peanut Butter Detail View Controller-->
         <scene sceneID="i3H-4F-7Sf">
@@ -176,7 +176,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AF-TM-FcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4167" y="23"/>
+            <point key="canvasLocation" x="4990" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aOE-Sb-OAr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfx-0Z-UaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Uy-Np-Qew" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iTZ-bJ-VR0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RFS-gs-yJL" kind="relationship" relationship="rootViewController" id="veh-4d-dxb"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2372" y="23"/>
         </scene>
     </scenes>
 </document>
