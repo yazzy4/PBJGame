@@ -12,6 +12,7 @@ class MenuViewiewController: UIViewController {
     
     @IBOutlet weak var menuTableView: UITableView!
     
+    let foodOptionsView = FoodOptionsCell()
 
     var menuOptions = ["Number of Slices", "Type of Jelly", "Type of Peanut Butter"]
     
@@ -22,9 +23,7 @@ class MenuViewiewController: UIViewController {
         self.title = "Main Menu"
         menuTableView.dataSource = self
         menuTableView.delegate = self
-        
-        
-//        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(didPressDoneButton(_:)))
+
     }
     
 //    @objc func didPressDoneButton(_ sender: UIBarButtonItem){

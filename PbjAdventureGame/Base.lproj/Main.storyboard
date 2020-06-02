@@ -84,9 +84,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="itemLabel" destination="C3C-iA-exz" id="lee-ee-Jb1"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
