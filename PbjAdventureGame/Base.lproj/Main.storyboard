@@ -68,21 +68,97 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="591"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodCell" rowHeight="96" id="APo-Us-i4R" customClass="FoodOptionsCell" customModule="PbjAdventureGame" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="slicesCell" rowHeight="169" id="APo-Us-i4R" customClass="ItemTableViewCell" customModule="PbjAdventureGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="APo-Us-i4R" id="PpT-Ht-VdZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3C-iA-exz">
-                                                    <rect key="frame" x="15" y="11" width="0.0" height="0.0"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="udg-j5-i1M">
+                                                    <rect key="frame" x="20" y="21" width="124" height="127"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="R7c-X1-heL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Slices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-vG-Qva">
+                                                    <rect key="frame" x="152" y="68" width="155" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F2m-vG-Qva" firstAttribute="top" secondItem="PpT-Ht-VdZ" secondAttribute="topMargin" constant="57" id="Mex-bt-BJA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="F2m-vG-Qva" secondAttribute="trailing" constant="53" id="aHM-cd-rg7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="udg-j5-i1M" secondAttribute="bottom" constant="10" id="cIi-kN-nj3"/>
+                                                <constraint firstItem="F2m-vG-Qva" firstAttribute="centerY" secondItem="udg-j5-i1M" secondAttribute="centerY" id="l2J-eQ-glG"/>
+                                                <constraint firstItem="udg-j5-i1M" firstAttribute="leading" secondItem="PpT-Ht-VdZ" secondAttribute="leadingMargin" constant="5" id="p3F-kf-5lk"/>
+                                                <constraint firstItem="F2m-vG-Qva" firstAttribute="leading" secondItem="udg-j5-i1M" secondAttribute="trailing" constant="8" symbolic="YES" id="uNX-HD-kQH"/>
+                                                <constraint firstItem="udg-j5-i1M" firstAttribute="top" secondItem="PpT-Ht-VdZ" secondAttribute="topMargin" constant="10" id="vIj-hB-Lq5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jellyCell" rowHeight="169" id="M8P-5a-BOV" customClass="ItemTableViewCell" customModule="PbjAdventureGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="197" width="375" height="169"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M8P-5a-BOV" id="zyg-I9-RQN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-gW-Vb8">
+                                                    <rect key="frame" x="20" y="21" width="124" height="127"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="KG9-W7-Rxy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Jelly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hN-an-XtF">
+                                                    <rect key="frame" x="152" y="68" width="155" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s1W-gW-Vb8" firstAttribute="top" secondItem="zyg-I9-RQN" secondAttribute="topMargin" constant="10" id="eAr-D4-Pfg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3hN-an-XtF" secondAttribute="trailing" constant="53" id="fRE-pB-zTv"/>
+                                                <constraint firstItem="3hN-an-XtF" firstAttribute="leading" secondItem="s1W-gW-Vb8" secondAttribute="trailing" constant="8" symbolic="YES" id="mN0-aJ-Czc"/>
+                                                <constraint firstItem="3hN-an-XtF" firstAttribute="top" secondItem="zyg-I9-RQN" secondAttribute="topMargin" constant="57" id="oMT-Yn-dzd"/>
+                                                <constraint firstItem="s1W-gW-Vb8" firstAttribute="leading" secondItem="zyg-I9-RQN" secondAttribute="leadingMargin" constant="5" id="skF-N1-vgm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="s1W-gW-Vb8" secondAttribute="bottom" constant="10" id="tGb-yO-UzX"/>
+                                                <constraint firstItem="3hN-an-XtF" firstAttribute="centerY" secondItem="s1W-gW-Vb8" secondAttribute="centerY" id="wq2-3i-QOV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pbCell" rowHeight="169" id="Mb2-6R-ZFY" customClass="ItemTableViewCell" customModule="PbjAdventureGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="366" width="375" height="169"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mb2-6R-ZFY" id="bIa-ye-jlL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ww-u1-MkS">
+                                                    <rect key="frame" x="20" y="21" width="124" height="127"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="a5e-qC-2hf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Peanut Butter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Q-wN-c1q">
+                                                    <rect key="frame" x="152" y="68" width="155" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Z4Q-wN-c1q" firstAttribute="centerY" secondItem="4ww-u1-MkS" secondAttribute="centerY" id="114-b3-CaH"/>
+                                                <constraint firstItem="Z4Q-wN-c1q" firstAttribute="top" secondItem="bIa-ye-jlL" secondAttribute="topMargin" constant="57" id="1bb-Z1-dO3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4ww-u1-MkS" secondAttribute="bottom" constant="10" id="V2y-fO-IVa"/>
+                                                <constraint firstItem="Z4Q-wN-c1q" firstAttribute="leading" secondItem="4ww-u1-MkS" secondAttribute="trailing" constant="8" symbolic="YES" id="lia-EH-f3K"/>
+                                                <constraint firstItem="4ww-u1-MkS" firstAttribute="top" secondItem="bIa-ye-jlL" secondAttribute="topMargin" constant="10" id="nQC-DB-Emn"/>
+                                                <constraint firstItem="4ww-u1-MkS" firstAttribute="leading" secondItem="bIa-ye-jlL" secondAttribute="leadingMargin" constant="5" id="zaT-cJ-tnQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Z4Q-wN-c1q" secondAttribute="trailing" constant="53" id="zva-4w-jQy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

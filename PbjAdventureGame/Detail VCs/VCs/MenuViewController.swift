@@ -11,38 +11,59 @@ import UIKit
 class MenuViewiewController: UIViewController {
     
     @IBOutlet weak var menuTableView: UITableView!
-    
-    let foodOptionsView = FoodOptionsCell()
 
-    var menuOptions = ["Number of Slices", "Type of Jelly", "Type of Peanut Butter"]
+    var foodImage = [UIImage]()
     
-    var itemOptions = FoodOptionsCell()
+    var pbjModel: PBJModel?
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Main Menu"
         menuTableView.dataSource = self
         menuTableView.delegate = self
+        self.menuTableView.register(ItemTableViewCell.self, forCellReuseIdentifier: "slicesCell")
+         self.menuTableView.register(ItemTableViewCell.self, forCellReuseIdentifier: "jellyCell")
+        self.menuTableView.register(ItemTableViewCell.self, forCellReuseIdentifier: "pbCell")
+        
+        populateImage()
 
     }
     
-//    @objc func didPressDoneButton(_ sender: UIBarButtonItem){
-//        performSegue(withIdentifier: "doneSegue", sender: self)
-//    }
+    func populateImage(){
+          for i in 0...1 {
+              foodImage.append(UIImage(named: "pbj\(i)") ?? UIImage())
+          }
+          
+      }
+    
+class ItemTableViewCell: UITableViewCell {
+    @IBOutlet weak var foodImageView: UIImageView!
+    @IBOutlet weak var itemLabel: UILabel!
+    
+}
+  
+
 
 
 }
 
 extension MenuViewiewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        menuOptions.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
-        cell?.textLabel?.text = menuOptions[indexPath.row]
+        let cell = tableView.dequeueReusableCell (withIdentifier: "slicesCell",  for: indexPath) as! ItemTableViewCell
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "jellyCell", for: indexPath) as! ItemTableViewCell
         
-        return cell!
+        let cell2 = tableView.dequeueReusableCell(withIdentifier: "pbCell", for: indexPath) as! ItemTableViewCell
+        cell.foodImageView?.image = foodImage[indexPath.row]
+        cell1.foodImageView?.image = foodImage[indexPath.row]
+        cell2.foodImageView?.image = foodImage[indexPath.row]
+        
+        return cell
     }
     
     
