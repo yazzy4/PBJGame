@@ -12,11 +12,10 @@ import UIKit
 
 class StartBuildingViewController: UIViewController {
     
-  
+    @IBOutlet weak var orderLabel: UILabel!
     
     
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
